@@ -1,681 +1,758 @@
-<html lang="en" class="scroll-smooth" style="height: auto; min-height: 100%;"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sarah &amp; James - Wedding Invitation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet">
-  <script>
-      tailwind.config = {
-          theme: {
-              extend: {
-                  colors: {
-                      'wedding-cream': '#F9F7F2',
-                      'wedding-blush': '#F4E1E1',
-                      'wedding-gold': '#D4AF37',
-                      'wedding-text': '#4A4A4A',
-                      'wedding-accent': '#8E7F7F',
-                  },
-                  fontFamily: {
-                      serif: ['"Cormorant Garamond"', 'serif'],
-                      sans: ['"Montserrat"', 'sans-serif'],
-                      script: ['"Great Vibes"', 'cursive'],
-                  },
-                  backgroundImage: {
-                      'floral-pattern': "url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
-                  }
-              }
-          }
-      }
-  </script>
-  <style>
-      .gold-gradient-text {
-          background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-      }
-      .glass-card {
-          background: rgba(255, 255, 255, 0.85);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.5);
-      }
-      .timeline-line::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 50%;
-          width: 1px;
-          background-color: #D4AF37;
-          transform: translateX(-50%);
-      }
-      @media (max-width: 768px) {
-          .timeline-line::before {
-              display: none;
-          }
-      }
-      .radio-custom {
-          appearance: none;
-          width: 20px;
-          height: 20px;
-          border: 2px solid #D4AF37;
-          border-radius: 50%;
-          outline: none;
-          cursor: pointer;
-          position: relative;
-          transition: all 0.3s ease;
-      }
-      .radio-custom:checked {
-          background-color: #D4AF37;
-          border-color: #D4AF37;
-      }
-      .radio-custom:checked::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 8px;
-          height: 8px;
-          background-color: white;
-          border-radius: 50%;
-      }
-      .radio-label {
-          cursor: pointer;
-          transition: all 0.3s ease;
-      }
-      .radio-label:has(input:checked) {
-          background-color: #F4E1E1;
-          border-color: #D4AF37;
-      }
-  </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Montserrat", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-4{bottom:1rem}.bottom-6{bottom:1.5rem}.left-0{left:0px}.left-1\/2{left:50%}.right-4{right:1rem}.top-0{top:0px}.top-4{top:1rem}.-left-3{left:-0.75rem}.-top-3{top:-0.75rem}.z-0{z-index:0}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.z-\[60\]{z-index:60}.order-1{order:1}.order-2{order:2}.col-span-2{grid-column:span 2 / span 2}.row-span-2{grid-row:span 2 / span 2}.mx-1{margin-left:0.25rem;margin-right:0.25rem}.mx-auto{margin-left:auto;margin-right:auto}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-3{margin-right:0.75rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-28{height:7rem}.h-32{height:8rem}.h-4{height:1rem}.h-48{height:12rem}.h-\[1px\]{height:1px}.h-full{height:100%}.h-8{height:2rem}.max-h-\[90vh\]{max-height:90vh}.min-h-\[85vh\]{min-height:85vh}.w-0{width:0px}.w-10{width:2.5rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-28{width:7rem}.w-32{width:8rem}.w-4{width:1rem}.w-48{width:12rem}.w-8{width:2rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-full{max-width:100%}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes bounce{0%, 100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.animate-bounce{animation:bounce 1s infinite}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.scroll-smooth{scroll-behavior:smooth}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-br-full{border-bottom-right-radius:9999px}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity, 1))}.border-wedding-gold{--tw-border-opacity:1;border-color:rgb(212 175 55 / var(--tw-border-opacity, 1))}.border-wedding-gold\/20{border-color:rgb(212 175 55 / 0.2)}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.bg-black\/20{background-color:rgb(0 0 0 / 0.2)}.bg-black\/90{background-color:rgb(0 0 0 / 0.9)}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-wedding-blush{--tw-bg-opacity:1;background-color:rgb(244 225 225 / var(--tw-bg-opacity, 1))}.bg-wedding-cream{--tw-bg-opacity:1;background-color:rgb(249 247 242 / var(--tw-bg-opacity, 1))}.bg-wedding-gold{--tw-bg-opacity:1;background-color:rgb(212 175 55 / var(--tw-bg-opacity, 1))}.bg-wedding-text{--tw-bg-opacity:1;background-color:rgb(74 74 74 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/60{background-color:rgb(255 255 255 / 0.6)}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.object-cover{object-fit:cover}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.p-5{padding:1.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-1{padding-bottom:0.25rem}.pb-6{padding-bottom:1.5rem}.pt-16{padding-top:4rem}.pt-2{padding-top:0.5rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.font-sans{font-family:"Montserrat", sans-serif}.font-script{font-family:"Great Vibes", cursive}.font-serif{font-family:"Cormorant Garamond", serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-widest{letter-spacing:0.1em}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-wedding-gold{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity, 1))}.text-wedding-text{--tw-text-opacity:1;color:rgb(74 74 74 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-white\/70{color:rgb(255 255 255 / 0.7)}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.opacity-10{opacity:0.1}.opacity-70{opacity:0.7}.opacity-20{opacity:0.2}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-\[2px\]{--tw-backdrop-blur:blur(2px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.duration-\[250ms\]{transition-duration:250ms}.ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1)}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-wedding-gold:hover{--tw-border-opacity:1;border-color:rgb(212 175 55 / var(--tw-border-opacity, 1))}.hover\:border-yellow-600:hover{--tw-border-opacity:1;border-color:rgb(202 138 4 / var(--tw-border-opacity, 1))}.hover\:bg-gray-300:hover{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.hover\:bg-white\/10:hover{background-color:rgb(255 255 255 / 0.1)}.hover\:bg-yellow-600:hover{--tw-bg-opacity:1;background-color:rgb(202 138 4 / var(--tw-bg-opacity, 1))}.hover\:text-wedding-gold:hover{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-yellow-600:hover{--tw-text-opacity:1;color:rgb(202 138 4 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-wedding-gold:focus{--tw-border-opacity:1;border-color:rgb(212 175 55 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-wedding-gold:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(212 175 55 / var(--tw-ring-opacity, 1))}.group:hover .group-hover\:w-full{width:100%}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-wedding-gold{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:mt-0{margin-top:0px}.sm\:inline{display:inline}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 768px){.md\:bottom-10{bottom:2.5rem}.md\:bottom-6{bottom:1.5rem}.md\:right-6{right:1.5rem}.md\:top-6{top:1.5rem}.md\:order-1{order:1}.md\:order-2{order:2}.md\:mx-2{margin-left:0.5rem;margin-right:0.5rem}.md\:my-8{margin-top:2rem;margin-bottom:2rem}.md\:mb-0{margin-bottom:0px}.md\:mb-10{margin-bottom:2.5rem}.md\:mb-12{margin-bottom:3rem}.md\:mb-16{margin-bottom:4rem}.md\:mb-4{margin-bottom:1rem}.md\:mb-6{margin-bottom:1.5rem}.md\:mb-8{margin-bottom:2rem}.md\:mt-10{margin-top:2.5rem}.md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}.md\:h-16{height:4rem}.md\:h-20{height:5rem}.md\:h-32{height:8rem}.md\:h-40{height:10rem}.md\:h-64{height:16rem}.md\:h-10{height:2.5rem}.md\:min-h-\[90vh\]{min-height:90vh}.md\:w-1\/2{width:50%}.md\:w-12{width:3rem}.md\:w-16{width:4rem}.md\:w-20{width:5rem}.md\:w-32{width:8rem}.md\:w-40{width:10rem}.md\:w-64{width:16rem}.md\:w-10{width:2.5rem}.md\:-translate-y-4{--tw-translate-y:-1rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-start{align-items:flex-start}.md\:justify-start{justify-content:flex-start}.md\:justify-end{justify-content:flex-end}.md\:gap-4{gap:1rem}.md\:gap-6{gap:1.5rem}.md\:gap-8{gap:2rem}.md\:space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.md\:space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.md\:p-10{padding:2.5rem}.md\:p-8{padding:2rem}.md\:p-6{padding:1.5rem}.md\:px-8{padding-left:2rem;padding-right:2rem}.md\:py-16{padding-top:4rem;padding-bottom:4rem}.md\:py-20{padding-top:5rem;padding-bottom:5rem}.md\:py-4{padding-top:1rem;padding-bottom:1rem}.md\:pl-12{padding-left:3rem}.md\:pr-12{padding-right:3rem}.md\:pt-20{padding-top:5rem}.md\:text-right{text-align:right}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:tracking-\[0\.3em\]{letter-spacing:0.3em}}@media (min-width: 1024px){.lg\:mb-24{margin-bottom:6rem}.lg\:h-48{height:12rem}.lg\:w-48{width:12rem}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:gap-12{gap:3rem}.lg\:p-12{padding:3rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-2xl{font-size:1.5rem;line-height:2rem}.lg\:text-4xl{font-size:2.25rem;line-height:2.5rem}.lg\:text-5xl{font-size:3rem;line-height:1}.lg\:text-6xl{font-size:3.75rem;line-height:1}.lg\:text-8xl{font-size:6rem;line-height:1}.lg\:text-9xl{font-size:8rem;line-height:1}.lg\:text-lg{font-size:1.125rem;line-height:1.75rem}}</style></head>
-<body class="bg-wedding-cream text-wedding-text font-sans antialiased overflow-x-hidden" style="height: auto; min-height: 100%;" x-data="{ 
-  mobileMenuOpen: false, 
-  musicPlaying: false,
-  rsvpSuccess: false,
-  lightboxOpen: false,
-  currentImage: '',
-  showGuestbookForm: false,
-  guestbookMessages: [
-      {name: 'Emily &amp; Tom', message: 'Wishing you both a lifetime of love and happiness. So excited to celebrate with you!', time: '2 days ago'},
-      {name: 'Aunt Martha', message: 'Congratulations on your special day! May your love grow stronger each and every passing year.', time: '1 week ago'},
-      {name: 'The Wilsons', message: 'Can\'t wait to see the beautiful bride! Best wishes to the happy couple.', time: '3 days ago'}
-  ],
-  toggleMusic() {
-      this.musicPlaying = !this.musicPlaying;
-  },
-  openLightbox(imgSrc) {
-      this.currentImage = imgSrc;
-      this.lightboxOpen = true;
-  },
-  submitGuestbookMessage(event) {
-      const formData = new FormData(event.target);
-      const name = formData.get('guestName');
-      const message = formData.get('guestMessage');
-      if (name &amp;&amp; message) {
-          this.guestbookMessages.unshift({
-              name: name,
-              message: message,
-              time: 'Just now'
-          });
-          event.target.reset();
-          this.showGuestbookForm = false;
-      }
-  }
-}">
+<!doctype html>
+<html lang="en" class="scroll-smooth" style="height: auto; min-height: 100%;">
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-16 md:h-20">
-              <div class="flex-shrink-0 flex items-center">
-                  <span class="font-script text-2xl md:text-3xl text-wedding-gold">S &amp; J</span>
-              </div>
-              
-              <!-- Desktop Menu -->
-              <div class="hidden md:flex space-x-8 items-center">
-                  <a href="#home" class="text-wedding-text hover:text-wedding-gold transition-colors font-medium text-sm tracking-widest uppercase">Home</a>
-                  <a href="#story" class="text-wedding-text hover:text-wedding-gold transition-colors font-medium text-sm tracking-widest uppercase">Story</a>
-                  <a href="#details" class="text-wedding-text hover:text-wedding-gold transition-colors font-medium text-sm tracking-widest uppercase">Details</a>
-                  <a href="#gallery" class="text-wedding-text hover:text-wedding-gold transition-colors font-medium text-sm tracking-widest uppercase">Gallery</a>
-                  <a href="#rsvp" class="bg-wedding-gold text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition-all transform hover:scale-105 shadow-md text-sm tracking-widest uppercase">RSVP</a>
-              </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustahadi Agum & Tree vagianti - Wedding Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;family=Great+Vibes&amp;display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'wedding-cream': '#F9F7F2',
+                        'wedding-blush': '#F4E1E1',
+                        'wedding-gold': '#D4AF37',
+                        'wedding-text': '#4A4A4A',
+                        'wedding-accent': '#8E7F7F',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                        script: ['"Great Vibes"', 'cursive'],
+                    },
+                    backgroundImage: {
+                        'floral-pattern': "url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
 
-              <!-- Mobile Menu Button -->
-              <div class="md:hidden flex items-center">
-                  <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-wedding-text hover:text-wedding-gold focus:outline-none">
-                      <i class="fas fa-bars text-xl"></i>
-                  </button>
-              </div>
-          </div>
-      </div>
+<body class="bg-wedding-cream text-wedding-text font-sans antialiased overflow-x-hidden"
+    style="height: auto; min-height: 100%;">
 
-      <!-- Mobile Menu -->
-      <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" class="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg" style="display: none;">
-          <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col items-center">
-              <a href="#home" @click="mobileMenuOpen = false" class="block px-3 py-3 text-wedding-text hover:text-wedding-gold font-medium tracking-widest uppercase text-sm">Home</a>
-              <a href="#story" @click="mobileMenuOpen = false" class="block px-3 py-3 text-wedding-text hover:text-wedding-gold font-medium tracking-widest uppercase text-sm">Story</a>
-              <a href="#details" @click="mobileMenuOpen = false" class="block px-3 py-3 text-wedding-text hover:text-wedding-gold font-medium tracking-widest uppercase text-sm">Details</a>
-              <a href="#gallery" @click="mobileMenuOpen = false" class="block px-3 py-3 text-wedding-text hover:text-wedding-gold font-medium tracking-widest uppercase text-sm">Gallery</a>
-              <a href="#rsvp" @click="mobileMenuOpen = false" class="mt-4 w-full bg-wedding-gold text-white px-6 py-3 rounded-full hover:bg-yellow-600 transition-colors shadow-md tracking-widest uppercase text-center block text-sm">RSVP Now</a>
-          </div>
-      </div>
-  </nav>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-script text-2xl md:text-3xl text-wedding-gold">S &amp; J</span>
+                </div>
 
-  <!-- Hero Section -->
-  <section id="home" class="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden pt-16 md:pt-20">
-      <!-- Background Image with Overlay -->
-      <div class="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80" alt="Wedding Background" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-white/60 backdrop-blur-[2px]"></div>
-      </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home"
+                        class="text-wedding-text hover:text-wedding-gold transition-colors font-medium text-sm tracking-widest uppercase">Home</a>
+                    <a href="#story"
+                        class="text-wedding-text hover:text-wedding-gold transition-colors font-medium text-sm tracking-widest uppercase">Story</a>
+                    <a href="#details"
+                        class="text-wedding-text hover:text-wedding-gold transition-colors font-medium text-sm tracking-widest uppercase">Details</a>
+                    <a href="#gallery"
+                        class="text-wedding-text hover:text-wedding-gold transition-colors font-medium text-sm tracking-widest uppercase">Gallery</a>
+                </div>
 
-      <!-- Content -->
-      <div class="relative z-10 text-center px-4 lg:px-12 xl:px-20 max-w-3xl mx-auto" data-aos="fade-up">
-        <p class="text-gray-800 tracking-[0.2em] md:tracking-[0.3em] uppercase text-xs md:text-sm mb-3 md:mb-4 font-semibold">The Wedding Of</p>
-        
-        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-2 leading-tight font-bold px-2">
-            Mustahadi Agum 
-            <span class="font-script text-wedding-gold mx-1 md:mx-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">&amp;</span> 
-            <span class="block sm:inline mt-2 sm:mt-0">Mempelai Wanita</span>
-        </h1>
-      
-        <div class="flex items-center justify-center space-x-3 md:space-x-4 my-6 md:my-8">
-            <div class="h-[1px] w-8 md:w-12 bg-wedding-gold"></div>
-            <p class="text-base md:text-xl lg:text-2xl font-serif italic text-gray-800 font-semibold">September 24th, 2024</p>
-            <div class="h-[1px] w-8 md:w-12 bg-wedding-gold"></div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()"
+                        class="text-wedding-text hover:text-wedding-gold focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      
-        <p class="text-sm md:text-base lg:text-lg tracking-widest uppercase mb-8 md:mb-10 text-gray-800 font-semibold px-4">The Grand Estate • Tuscany, Italy</p>
-      
-        <a href="#rsvp" class="group relative inline-block px-6 md:px-8 py-3 md:py-4 bg-transparent overflow-hidden rounded-full border-2 border-gray-800 hover:border-wedding-gold transition-colors duration-300">
-            <div class="absolute inset-0 w-0 bg-wedding-gold transition-all duration-[250ms] ease-out group-hover:w-full opacity-10"></div>
-            <span class="relative text-gray-900 group-hover:text-wedding-gold font-semibold tracking-widest uppercase transition-colors duration-300 text-sm md:text-base">Open Invitation</span>
-        </a>
-      </div>
-      
-      <!-- Scroll Indicator -->
-      <div class="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <i class="fas fa-chevron-down text-gray-800 opacity-70 text-lg md:text-xl"></i>
-      </div>
-  </section>
 
-  <!-- Countdown Section -->
-  <section class="py-12 md:py-16 bg-white">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-          <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 text-wedding-text">Counting Down The Days</h2>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-12" x-data="{
-              days: '00', hours: '00', minutes: '00', seconds: '00',
-              timer: null,
-              startTimer() {
-                  const weddingDate = new Date('September 24, 2024 15:00:00').getTime();
-                  this.timer = setInterval(() => {
-                      const now = new Date().getTime();
-                      const distance = weddingDate - now;
-                      if (distance < 0) {
-                          clearInterval(this.timer);
-                          return;
-                      }
-                      this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                      this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                      this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                      this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                  }, 1000);
-              }
-          }" x-init="startTimer()">
-              
-              <div class="flex flex-col items-center">
-                  <div class="text-3xl md:text-5xl lg:text-6xl font-serif text-wedding-gold mb-2" x-text="days">00</div>
-                  <div class="text-xs uppercase tracking-widest text-gray-500">Days</div>
-              </div>
-              <div class="flex flex-col items-center">
-                  <div class="text-3xl md:text-5xl lg:text-6xl font-serif text-wedding-gold mb-2" x-text="hours">00</div>
-                  <div class="text-xs uppercase tracking-widest text-gray-500">Hours</div>
-              </div>
-              <div class="flex flex-col items-center">
-                  <div class="text-3xl md:text-5xl lg:text-6xl font-serif text-wedding-gold mb-2" x-text="minutes">00</div>
-                  <div class="text-xs uppercase tracking-widest text-gray-500">Minutes</div>
-              </div>
-              <div class="flex flex-col items-center">
-                  <div class="text-3xl md:text-5xl lg:text-6xl font-serif text-wedding-gold mb-2" x-text="seconds">00</div>
-                  <div class="text-xs uppercase tracking-widest text-gray-500">Seconds</div>
-              </div>
-          </div>
-      </div>
-  </section>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg hidden">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col items-center">
+                <a href="#home" onclick="toggleMobileMenu()"
+                    class="block px-3 py-3 text-wedding-text hover:text-wedding-gold font-medium tracking-widest uppercase text-sm">Home</a>
+                <a href="#story" onclick="toggleMobileMenu()"
+                    class="block px-3 py-3 text-wedding-text hover:text-wedding-gold font-medium tracking-widest uppercase text-sm">Story</a>
+                <a href="#details" onclick="toggleMobileMenu()"
+                    class="block px-3 py-3 text-wedding-text hover:text-wedding-gold font-medium tracking-widest uppercase text-sm">Details</a>
+                <a href="#gallery" onclick="toggleMobileMenu()"
+                    class="block px-3 py-3 text-wedding-text hover:text-wedding-gold font-medium tracking-widest uppercase text-sm">Gallery</a>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Love Story Section -->
-  <section id="story" class="py-16 md:py-20 bg-wedding-cream relative overflow-hidden">
-      <!-- Decorative Background Elements -->
-      <div class="absolute top-0 left-0 w-48 md:w-64 h-48 md:h-64 opacity-10 pointer-events-none">
-          <img src="https://images.unsplash.com/photo-1587575494201-11fe74d90d38?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-full h-full object-cover rounded-br-full">
-      </div>
+    <!-- Hero Section -->
+    <section id="home"
+        class="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden pt-16 md:pt-20">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80"
+                alt="Wedding Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-white/60 backdrop-blur-[2px]"></div>
+        </div>
 
-      <div class="max-w-5xl mx-auto px-4 relative z-10">
-          <div class="text-center mb-12 md:mb-16">
-              <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">Our Journey</span>
-              <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text">Love Story</h2>
-          </div>
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 lg:px-12 xl:px-20 max-w-3xl mx-auto" data-aos="fade-up">
+            <p
+                class="text-gray-800 tracking-[0.2em] md:tracking-[0.3em] uppercase text-xs md:text-sm mb-3 md:mb-4 font-semibold">
+                The Wedding Of</p>
 
-          <div class="relative timeline-line">
-              <!-- Story Item 1 -->
-              <div class="relative z-10 mb-12 md:mb-16 lg:mb-24">
-                  <div class="flex flex-col md:flex-row items-center md:items-start">
-                      <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0 order-2 md:order-1">
-                          <h3 class="font-serif text-xl md:text-2xl text-wedding-text mb-2">First Meeting</h3>
-                          <span class="text-wedding-gold font-medium block mb-3 md:mb-4 text-sm md:text-base">June 15, 2018</span>
-                          <p class="text-gray-600 leading-relaxed text-sm md:text-base">We met at a small coffee shop in downtown. James spilled his latte, Sarah offered a napkin, and the rest is history.</p>
-                      </div>
-                      <div class="md:w-1/2 md:pl-12 order-1 md:order-2 flex justify-center md:justify-start mb-6 md:mb-0">
-                          <div class="w-32 h-32 md:w-40 lg:w-48 md:h-40 lg:h-48 rounded-full border-4 border-white shadow-xl overflow-hidden relative">
-                              <img src="https://images.unsplash.com/photo-1522673607200-1645062cd958?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-full h-full object-cover">
-                          </div>
-                      </div>
-                      <!-- Center Dot -->
-                      <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-gold rounded-full border-4 border-white shadow hidden md:block"></div>
-                  </div>
-              </div>
+            <h1
+                class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-2 leading-tight font-bold px-2">
+                Mustahadi Agum
+                <span
+                    class="font-script text-wedding-gold mx-1 md:mx-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">&amp;</span>
+                <span class="block sm:inline mt-2 sm:mt-0">Tree vagianti</span>
+            </h1>
 
-              <!-- Story Item 2 -->
-              <div class="relative z-10 mb-12 md:mb-16 lg:mb-24">
-                  <div class="flex flex-col md:flex-row items-center md:items-start">
-                      <div class="md:w-1/2 md:pr-12 flex justify-center md:justify-end mb-6 md:mb-0 order-1">
-                          <div class="w-32 h-32 md:w-40 lg:w-48 md:h-40 lg:h-48 rounded-full border-4 border-white shadow-xl overflow-hidden relative">
-                              <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-full h-full object-cover">
-                          </div>
-                      </div>
-                      <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0 order-2">
-                          <h3 class="font-serif text-xl md:text-2xl text-wedding-text mb-2">First Date</h3>
-                          <span class="text-wedding-gold font-medium block mb-3 md:mb-4 text-sm md:text-base">July 01, 2018</span>
-                          <p class="text-gray-600 leading-relaxed text-sm md:text-base">Our first official date was a walk in the botanical gardens followed by dinner under the stars.</p>
-                      </div>
-                      <!-- Center Dot -->
-                      <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-gold rounded-full border-4 border-white shadow hidden md:block"></div>
-                  </div>
-              </div>
+            <div class="flex items-center justify-center space-x-3 md:space-x-4 my-6 md:my-8">
+                <div class="h-[1px] w-8 md:w-12 bg-wedding-gold"></div>
+                <p class="text-base md:text-xl lg:text-2xl font-serif italic text-gray-800 font-semibold">December 21th,
+                    2025</p>
+                <div class="h-[1px] w-8 md:w-12 bg-wedding-gold"></div>
+            </div>
 
-              <!-- Story Item 3 -->
-              <div class="relative z-10">
-                  <div class="flex flex-col md:flex-row items-center md:items-start">
-                      <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0 order-2 md:order-1">
-                          <h3 class="font-serif text-xl md:text-2xl text-wedding-text mb-2">The Proposal</h3>
-                          <span class="text-wedding-gold font-medium block mb-3 md:mb-4 text-sm md:text-base">December 24, 2023</span>
-                          <p class="text-gray-600 leading-relaxed text-sm md:text-base">On a snowy Christmas Eve, surrounded by family, James got down on one knee and asked the big question.</p>
-                      </div>
-                      <div class="md:w-1/2 md:pl-12 order-1 md:order-2 flex justify-center md:justify-start mb-6 md:mb-0">
-                          <div class="w-32 h-32 md:w-40 lg:w-48 md:h-40 lg:h-48 rounded-full border-4 border-white shadow-xl overflow-hidden relative">
-                              <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-full h-full object-cover">
-                          </div>
-                      </div>
-                      <!-- Center Dot -->
-                      <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-gold rounded-full border-4 border-white shadow hidden md:block"></div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+            <p
+                class="text-sm md:text-base lg:text-lg tracking-widest uppercase mb-8 md:mb-10 text-gray-800 font-semibold px-4">
+                are you and 1 hotel <br>Jl. Bojong Koneng Atas Jl. Pager Sari, Cibeunying, Kec. Cimenyan, Kabupaten
+                Bandung, Jawa Barat 40191</p>
 
-  <!-- Event Details Section -->
-  <section id="details" class="py-16 md:py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-          <div class="text-center mb-12 md:mb-16">
-              <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">The Big Day</span>
-              <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text">Event Details</h2>
-          </div>
+            <a href="#story"
+                class="group relative inline-block px-6 md:px-8 py-3 md:py-4 bg-transparent overflow-hidden rounded-full border-2 border-gray-800 hover:border-wedding-gold transition-colors duration-300">
+                <div
+                    class="absolute inset-0 w-0 bg-wedding-gold transition-all duration-[250ms] ease-out group-hover:w-full opacity-10">
+                </div>
+                <span
+                    class="relative text-gray-900 group-hover:text-wedding-gold font-semibold tracking-widest uppercase transition-colors duration-300 text-sm md:text-base">Open
+                    Invitation</span>
+            </a>
+        </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              <!-- Ceremony Card -->
-              <div class="glass-card p-6 md:p-8 rounded-2xl text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                  <div class="w-14 h-14 md:w-16 md:h-16 bg-wedding-blush rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-wedding-gold">
-                      <i class="fas fa-church text-xl md:text-2xl"></i>
-                  </div>
-                  <h3 class="font-serif text-xl md:text-2xl mb-2">The Ceremony</h3>
-                  <p class="text-wedding-gold font-medium mb-3 md:mb-4 text-sm md:text-base">3:00 PM - 4:30 PM</p>
-                  <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">St. Mary's Historic Chapel<br>123 Wedding Lane, Tuscany</p>
-                  <div class="border-t border-gray-100 pt-4">
-                      <p class="text-xs md:text-sm text-gray-500 mb-2"><span class="font-semibold">Dress Code:</span> Formal</p>
-                      <a href="#" class="text-wedding-gold text-xs md:text-sm hover:underline flex items-center justify-center gap-2">
-                          <i class="fas fa-map-marker-alt"></i> View Map
-                      </a>
-                  </div>
-              </div>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-gray-800 opacity-70 text-lg md:text-xl"></i>
+        </div>
+    </section>
 
-              <!-- Reception Card -->
-              <div class="glass-card p-6 md:p-8 rounded-2xl text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 transform md:-translate-y-4">
-                  <div class="w-14 h-14 md:w-16 md:h-16 bg-wedding-blush rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-wedding-gold">
-                      <i class="fas fa-glass-cheers text-xl md:text-2xl"></i>
-                  </div>
-                  <h3 class="font-serif text-xl md:text-2xl mb-2">The Reception</h3>
-                  <p class="text-wedding-gold font-medium mb-3 md:mb-4 text-sm md:text-base">5:00 PM - 9:00 PM</p>
-                  <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">The Grand Estate Garden<br>456 Celebration Ave, Tuscany</p>
-                  <div class="border-t border-gray-100 pt-4">
-                      <p class="text-xs md:text-sm text-gray-500 mb-2"><span class="font-semibold">Dress Code:</span> Black Tie Optional</p>
-                      <a href="#" class="text-wedding-gold text-xs md:text-sm hover:underline flex items-center justify-center gap-2">
-                          <i class="fas fa-map-marker-alt"></i> View Map
-                      </a>
-                  </div>
-              </div>
+    <!-- Countdown Section -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 text-wedding-text">Counting Down The
+                Days</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-12" id="countdown">
+                <div class="flex flex-col items-center">
+                    <div id="cd-days" class="text-3xl md:text-5xl lg:text-6xl font-serif text-wedding-gold mb-2">00
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Days</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div id="cd-hours" class="text-3xl md:text-5xl lg:text-6xl font-serif text-wedding-gold mb-2">00
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Hours</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div id="cd-minutes" class="text-3xl md:text-5xl lg:text-6xl font-serif text-wedding-gold mb-2">00
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Minutes</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div id="cd-seconds" class="text-3xl md:text-5xl lg:text-6xl font-serif text-wedding-gold mb-2">00
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-gray-500">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-              <!-- After Party Card -->
-              <div class="glass-card p-6 md:p-8 rounded-2xl text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                  <div class="w-14 h-14 md:w-16 md:h-16 bg-wedding-blush rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-wedding-gold">
-                      <i class="fas fa-music text-xl md:text-2xl"></i>
-                  </div>
-                  <h3 class="font-serif text-xl md:text-2xl mb-2">After Party</h3>
-                  <p class="text-wedding-gold font-medium mb-3 md:mb-4 text-sm md:text-base">9:30 PM - Late</p>
-                  <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">The Estate Ballroom<br>Same Location</p>
-                  <div class="border-t border-gray-100 pt-4">
-                      <p class="text-xs md:text-sm text-gray-500 mb-2"><span class="font-semibold">Dress Code:</span> Party Attire</p>
-                      <a href="#" class="text-wedding-gold text-xs md:text-sm hover:underline flex items-center justify-center gap-2">
-                          <i class="fas fa-map-marker-alt"></i> View Map
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+    <!-- Love Story Section -->
+    <section id="story" class="py-16 md:py-20 bg-wedding-cream relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-0 left-0 w-48 md:w-64 h-48 md:h-64 opacity-10 pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1587575494201-11fe74d90d38?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                class="w-full h-full object-cover rounded-br-full">
+        </div>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="py-16 md:py-20 bg-wedding-cream">
-      <div class="max-w-7xl mx-auto px-4">
-          <div class="text-center mb-12 md:mb-16">
-              <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">Captured Moments</span>
-              <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text">Our Gallery</h2>
-          </div>
+        <div class="max-w-5xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">Our Journey</span>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text">Love Story</h2>
+            </div>
 
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-              <!-- Image 1 -->
-              <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-xl cursor-pointer" @click="openLightbox('https://images.unsplash.com/photo-1511285560982-1356c11d4606?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80')">
-                  <img src="https://images.unsplash.com/photo-1511285560982-1356c11d4606?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <i class="fas fa-search-plus text-white text-2xl md:text-3xl"></i>
-                  </div>
-              </div>
-              <!-- Image 2 -->
-              <div class="relative group overflow-hidden rounded-xl cursor-pointer h-48 md:h-64" @click="openLightbox('https://images.unsplash.com/photo-1519225421980-715cb0202128?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60')">
-                  <img src="https://images.unsplash.com/photo-1519225421980-715cb0202128?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <i class="fas fa-search-plus text-white text-xl md:text-2xl"></i>
-                  </div>
-              </div>
-              <!-- Image 3 -->
-              <div class="relative group overflow-hidden rounded-xl cursor-pointer h-48 md:h-64" @click="openLightbox('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60')">
-                  <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <i class="fas fa-search-plus text-white text-xl md:text-2xl"></i>
-                  </div>
-              </div>
-              <!-- Image 4 -->
-              <div class="relative group overflow-hidden rounded-xl cursor-pointer h-48 md:h-64" @click="openLightbox('https://images.unsplash.com/photo-1520854221256-17451cc330e7?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60')">
-                  <img src="https://images.unsplash.com/photo-1520854221256-17451cc330e7?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <i class="fas fa-search-plus text-white text-xl md:text-2xl"></i>
-                  </div>
-              </div>
-              <!-- Image 5 -->
-              <div class="relative group overflow-hidden rounded-xl cursor-pointer h-48 md:h-64" @click="openLightbox('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60')">
-                  <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                  <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <i class="fas fa-search-plus text-white text-xl md:text-2xl"></i>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+            <div class="relative timeline-line">
+                <!-- Story items unchanged (static content) -->
+                <!-- Story Item 1 -->
+                <div class="relative z-10 mb-12 md:mb-16 lg:mb-24">
+                    <div class="flex flex-col md:flex-row items-center md:items-start">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0 order-2 md:order-1">
+                            <h3 class="font-serif text-xl md:text-2xl text-wedding-text mb-2">First Meeting</h3>
+                            <span class="text-wedding-gold font-medium block mb-3 md:mb-4 text-sm md:text-base">June 1,
+                                2021</span>
+                            <!-- <p class="text-gray-600 leading-relaxed text-sm md:text-base">We met at Holland Bakery</p> -->
+                        </div>
+                        <div
+                            class="md:w-1/2 md:pl-12 order-1 md:order-2 flex justify-center md:justify-start mb-6 md:mb-0">
+                            <div
+                                class="w-32 h-32 md:w-40 lg:w-48 md:h-40 lg:h-48 rounded-full border-4 border-white shadow-xl overflow-hidden relative">
+                                <img src="https://static.vecteezy.com/system/resources/previews/040/291/012/non_2x/ai-generated-valentine-s-day-wallpaper-for-your-desktop-free-photo.jpg"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Center Dot -->
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-gold rounded-full border-4 border-white shadow hidden md:block">
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Guestbook Section -->
-  <section id="guestbook" class="py-16 md:py-20 bg-white">
-      <div class="max-w-6xl mx-auto px-4">
-          <div class="text-center mb-12 md:mb-16">
-              <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">Wishes &amp; Blessings</span>
-              <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text">Guestbook</h2>
-          </div>
+                <!-- Story Item 2 -->
+                <div class="relative z-10 mb-12 md:mb-16 lg:mb-24">
+                    <div class="flex flex-col md:flex-row items-center md:items-start">
+                        <div class="md:w-1/2 md:pr-12 flex justify-center md:justify-end mb-6 md:mb-0 order-1">
+                            <div
+                                class="w-32 h-32 md:w-40 lg:w-48 md:h-40 lg:h-48 rounded-full border-4 border-white shadow-xl overflow-hidden relative">
+                                <img src="https://imgs.search.brave.com/8Vu_lipMzSvqBKlR6W6g-w111zdsfI9adSyUp0_Ehfk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTMv/MDAyLzUwMy9zbWFs/bC9sb3ZlLWhlYXJ0/LXdpdGgtcm9zZS1w/ZXRhbHMtb24td2V0/LXN1cmZhY2UtZnJl/ZS1waG90by5qcGc"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0 order-2">
+                            <h3 class="font-serif text-xl md:text-2xl text-wedding-text mb-2">First Date</h3>
+                            <span class="text-wedding-gold font-medium block mb-3 md:mb-4 text-sm md:text-base">January
+                                16, 2021</span>
+                            <!-- <p class="text-gray-600 leading-relaxed text-sm md:text-base">Our first official date was a walk in the botanical gardens followed by dinner under the stars.</p> -->
+                        </div>
+                        <!-- Center Dot -->
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-gold rounded-full border-4 border-white shadow hidden md:block">
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Guestbook Form (Shows when button clicked, hides messages) -->
-          <div x-show="showGuestbookForm" x-transition="" class="max-w-2xl mx-auto bg-wedding-cream p-6 md:p-8 rounded-2xl shadow-md" style="display: none;">
-              <h3 class="font-serif text-xl md:text-2xl text-wedding-text mb-4 md:mb-6 text-center">Leave Your Wishes</h3>
-              <form @submit.prevent="submitGuestbookMessage">
-                  <div class="space-y-4">
-                      <div>
-                          <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                          <input type="text" name="guestName" required="" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base" placeholder="John &amp; Jane Doe">
-                      </div>
-                      <div>
-                          <label class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
-                          <textarea name="guestMessage" rows="4" required="" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base" placeholder="Write your wishes for the couple..."></textarea>
-                      </div>
-                      <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
-                          <button type="submit" class="flex-1 bg-wedding-gold text-white py-3 rounded-full hover:bg-yellow-600 transition-colors shadow-md uppercase tracking-widest text-xs md:text-sm font-medium">
-                              Submit Message
-                          </button>
-                          <button type="button" @click="showGuestbookForm = false" class="flex-1 bg-gray-200 text-gray-700 py-3 rounded-full hover:bg-gray-300 transition-colors uppercase tracking-widest text-xs md:text-sm font-medium">
-                              Cancel
-                          </button>
-                      </div>
-                  </div>
-              </form>
-          </div>
+                <!-- Story Item 3 -->
+                <div class="relative z-10">
+                    <div class="flex flex-col md:flex-row items-center md:items-start">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0 order-2 md:order-1">
+                            <h3 class="font-serif text-xl md:text-2xl text-wedding-text mb-2">The Proposal</h3>
+                            <span class="text-wedding-gold font-medium block mb-3 md:mb-4 text-sm md:text-base">December
+                                21, 2025</span>
+                            <!-- <p class="text-gray-600 leading-relaxed text-sm md:text-base">On a snowy Christmas Eve, surrounded by family, James got down on one knee and asked the big question.</p> -->
+                        </div>
+                        <div
+                            class="md:w-1/2 md:pl-12 order-1 md:order-2 flex justify-center md:justify-start mb-6 md:mb-0">
+                            <div
+                                class="w-32 h-32 md:w-40 lg:w-48 md:h-40 lg:h-48 rounded-full border-4 border-white shadow-xl overflow-hidden relative">
+                                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Center Dot -->
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-wedding-gold rounded-full border-4 border-white shadow hidden md:block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          <!-- Messages Grid (Shows when form is hidden) -->
-          <div x-show="!showGuestbookForm" x-transition="">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                  <template x-for="(msg, index) in guestbookMessages" :key="index">
-                      <div class="bg-wedding-cream p-5 md:p-6 rounded-2xl shadow-sm relative">
-                          <div class="absolute -top-3 -left-3 text-wedding-gold opacity-20">
-                              <i class="fas fa-quote-left text-4xl md:text-6xl"></i>
-                          </div>
-                          <p class="text-gray-600 italic mb-4 md:mb-6 relative z-10 text-sm md:text-base" x-text="msg.message"></p>
-                          <div class="flex items-center">
-                              <div class="w-8 h-8 md:w-10 md:h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 mr-3 flex-shrink-0">
-                                  <i class="fas fa-user text-xs md:text-sm"></i>
-                              </div>
-                              <div>
-                                  <h4 class="font-serif font-semibold text-wedding-text text-sm md:text-base" x-text="msg.name"></h4>
-                                  <span class="text-xs text-gray-400" x-text="msg.time"></span>
-                              </div>
-                          </div>
-                      </div>
-                  </template><div class="bg-wedding-cream p-5 md:p-6 rounded-2xl shadow-sm relative">
-                          <div class="absolute -top-3 -left-3 text-wedding-gold opacity-20">
-                              <i class="fas fa-quote-left text-4xl md:text-6xl"></i>
-                          </div>
-                          <p class="text-gray-600 italic mb-4 md:mb-6 relative z-10 text-sm md:text-base" x-text="msg.message">Wishing you both a lifetime of love and happiness. So excited to celebrate with you!</p>
-                          <div class="flex items-center">
-                              <div class="w-8 h-8 md:w-10 md:h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 mr-3 flex-shrink-0">
-                                  <i class="fas fa-user text-xs md:text-sm"></i>
-                              </div>
-                              <div>
-                                  <h4 class="font-serif font-semibold text-wedding-text text-sm md:text-base" x-text="msg.name">Emily &amp; Tom</h4>
-                                  <span class="text-xs text-gray-400" x-text="msg.time">2 days ago</span>
-                              </div>
-                          </div>
-                      </div><div class="bg-wedding-cream p-5 md:p-6 rounded-2xl shadow-sm relative">
-                          <div class="absolute -top-3 -left-3 text-wedding-gold opacity-20">
-                              <i class="fas fa-quote-left text-4xl md:text-6xl"></i>
-                          </div>
-                          <p class="text-gray-600 italic mb-4 md:mb-6 relative z-10 text-sm md:text-base" x-text="msg.message">Congratulations on your special day! May your love grow stronger each and every passing year.</p>
-                          <div class="flex items-center">
-                              <div class="w-8 h-8 md:w-10 md:h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 mr-3 flex-shrink-0">
-                                  <i class="fas fa-user text-xs md:text-sm"></i>
-                              </div>
-                              <div>
-                                  <h4 class="font-serif font-semibold text-wedding-text text-sm md:text-base" x-text="msg.name">Aunt Martha</h4>
-                                  <span class="text-xs text-gray-400" x-text="msg.time">1 week ago</span>
-                              </div>
-                          </div>
-                      </div><div class="bg-wedding-cream p-5 md:p-6 rounded-2xl shadow-sm relative">
-                          <div class="absolute -top-3 -left-3 text-wedding-gold opacity-20">
-                              <i class="fas fa-quote-left text-4xl md:text-6xl"></i>
-                          </div>
-                          <p class="text-gray-600 italic mb-4 md:mb-6 relative z-10 text-sm md:text-base" x-text="msg.message">Can't wait to see the beautiful bride! Best wishes to the happy couple.</p>
-                          <div class="flex items-center">
-                              <div class="w-8 h-8 md:w-10 md:h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 mr-3 flex-shrink-0">
-                                  <i class="fas fa-user text-xs md:text-sm"></i>
-                              </div>
-                              <div>
-                                  <h4 class="font-serif font-semibold text-wedding-text text-sm md:text-base" x-text="msg.name">The Wilsons</h4>
-                                  <span class="text-xs text-gray-400" x-text="msg.time">3 days ago</span>
-                              </div>
-                          </div>
-                      </div>
-              </div>
-              
-              <div class="text-center mt-8 md:mt-10">
-                  <button @click.prevent="showGuestbookForm = true; $nextTick(() => { document.getElementById('guestbook').scrollIntoView({ behavior: 'smooth', block: 'start' }); })" class="text-wedding-gold border-b-2 border-wedding-gold pb-1 hover:text-yellow-600 hover:border-yellow-600 transition-colors font-medium text-sm md:text-base">
-                      Write a Wish
-                  </button>
-              </div>
-          </div>
-      </div>
-  </section>
+    <!-- Event Details Section -->
+    <section id="details" class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">The Big Day</span>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text">Event Details</h2>
+            </div>
 
-  <!-- RSVP Section -->
-  <section id="rsvp" class="py-16 md:py-20 bg-wedding-cream">
-      <div class="max-w-3xl mx-auto px-4">
-          <div class="text-center mb-10 md:mb-12">
-              <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">Join Us</span>
-              <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text mb-3 md:mb-4">RSVP</h2>
-              <p class="text-gray-600 text-sm md:text-base">Please respond by August 1st, 2024</p>
-          </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <!-- Ceremony Card -->
+                <div
+                    class="glass-card p-6 md:p-8 rounded-2xl text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 bg-wedding-blush rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-wedding-gold">
+                        <i class="fas fa-church text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-xl md:text-2xl mb-2">The Ceremony</h3>
+                    <p class="text-wedding-gold font-medium mb-3 md:mb-4 text-sm md:text-base">16:00 - 17:00</p>
+                    <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">are you and 1 hotel<br>
+                        Jl. Bojong Koneng Atas Jl. Pager Sari, Cibeunying, Kec. Cimenyan, Kabupaten Bandung, Jawa Barat
+                        40191</p>
+                    <div class="border-t border-gray-100 pt-4">
+                        <a href="https://maps.app.goo.gl/V8bVXCpSMF7FVtG29" target="_blank"
+                            class="text-wedding-gold text-xs md:text-sm hover:underline flex items-center justify-center gap-2">
+                            <i class="fas fa-map-marker-alt"></i> View Map
+                        </a>
+                    </div>
+                </div>
 
-          <!-- Success Message -->
-          <div x-show="rsvpSuccess" x-transition="" class="bg-white p-8 md:p-10 rounded-2xl shadow-lg text-center mb-8" style="display: none;">
-              <div class="w-16 h-16 md:w-20 md:h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-green-500">
-                  <i class="fas fa-check text-2xl md:text-3xl"></i>
-              </div>
-              <h3 class="font-serif text-2xl md:text-3xl text-wedding-text mb-3 md:mb-4">Thank You!</h3>
-              <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">Your RSVP has been received. We can't wait to celebrate with you!</p>
-          </div>
+                <!-- Reception Card -->
+                <div
+                    class="glass-card p-6 md:p-8 rounded-2xl text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 transform md:-translate-y-4">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 bg-wedding-blush rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-wedding-gold">
+                        <i class="fas fa-glass-cheers text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-xl md:text-2xl mb-2">The Reception</h3>
+                    <p class="text-wedding-gold font-medium mb-3 md:mb-4 text-sm md:text-base">17:00 - 21:00</p>
+                    <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">are you and 1 hotel<br>
+                        Jl. Bojong Koneng Atas Jl. Pager Sari, Cibeunying, Kec. Cimenyan, Kabupaten Bandung, Jawa Barat
+                        40191</p>
+                    <div class="border-t border-gray-100 pt-4">
+                        <a href="https://maps.app.goo.gl/V8bVXCpSMF7FVtG29" target="_blank"
+                            class="text-wedding-gold text-xs md:text-sm hover:underline flex items-center justify-center gap-2">
+                            <i class="fas fa-map-marker-alt"></i> View Map
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          <!-- RSVP Form -->
-          <div x-show="!rsvpSuccess" class="bg-white p-6 md:p-8 lg:p-12 rounded-2xl shadow-lg">
-              <form @submit.prevent="rsvpSuccess = true">
-                  <div class="space-y-5 md:space-y-6">
-                      <div>
-                          <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                          <input type="text" required="" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base" placeholder="John Doe">
-                      </div>
-                      
-                      <div>
-                          <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                          <input type="email" required="" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base" placeholder="john@example.com">
-                      </div>
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 md:py-20 bg-wedding-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">Captured Moments</span>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text">Our Gallery</h2>
+            </div>
 
-                      <div>
-                          <label class="block text-sm font-medium text-gray-700 mb-3">Will you be attending?</label>
-                          <div class="space-y-3">
-                              <label class="radio-label flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all">
-                                  <input type="radio" name="attendance" value="accept" class="radio-custom mr-3" required="">
-                                  <div class="flex items-center">
-                                      <i class="fas fa-heart text-wedding-gold mr-3 text-lg"></i>
-                                      <span class="text-gray-700 font-medium text-sm md:text-base">Joyfully Accepts</span>
-                                  </div>
-                              </label>
-                              <label class="radio-label flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all">
-                                  <input type="radio" name="attendance" value="decline" class="radio-custom mr-3" required="">
-                                  <div class="flex items-center">
-                                      <i class="fas fa-heart-broken text-gray-400 mr-3 text-lg"></i>
-                                      <span class="text-gray-700 font-medium text-sm md:text-base">Regretfully Declines</span>
-                                  </div>
-                              </label>
-                          </div>
-                      </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 gallery-grid">
+                <!-- Image 1 -->
+                <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-xl cursor-pointer gallery-item hidden"
+                    onclick="openLightbox('https://i.redd.it/lqejacvbpai71.png')">
+                    <img src="https://i.redd.it/lqejacvbpai71.png"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-2xl md:text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
-                          <div>
-                              <label class="block text-sm font-medium text-gray-700 mb-2">Number of Guests</label>
-                              <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                              </select>
-                          </div>
-                          <div>
-                              <label class="block text-sm font-medium text-gray-700 mb-2">Meal Preference</label>
-                              <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base">
-                                  <option>Standard</option>
-                                  <option>Vegetarian</option>
-                                  <option>Vegan</option>
-                                  <option>Halal</option>
-                                  <option>Seafood</option>
-                              </select>
-                          </div>
-                      </div>
+    <!-- Guestbook Section -->
+    <section id="guestbook" class="py-16 md:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">Wishes &amp;
+                    Blessings</span>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text">Guestbook</h2>
+            </div>
 
-                      <div>
-                          <label class="block text-sm font-medium text-gray-700 mb-2">Special Requests or Dietary Restrictions</label>
-                          <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base" placeholder="Any allergies or special requirements?"></textarea>
-                      </div>
+            <!-- Guestbook Form (Shows when button clicked, hides messages) -->
+            <div id="guestbook-form" class="max-w-2xl mx-auto bg-wedding-cream p-6 md:p-8 rounded-2xl shadow-md hidden">
+                <h3 class="font-serif text-xl md:text-2xl text-wedding-text mb-4 md:mb-6 text-center">Leave Your Wishes
+                </h3>
+                <form id="guestbook-form-el" onsubmit="submitGuestbookMessage(event)">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                            <input type="text" name="guestName" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base"
+                                placeholder="John &amp; Jane Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <textarea name="guestMessage" rows="4" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base"
+                                placeholder="Write your wishes for the couple..."></textarea>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+                            <button type="submit"
+                                class="flex-1 bg-wedding-gold text-white py-3 rounded-full hover:bg-yellow-600 transition-colors shadow-md uppercase tracking-widest text-xs md:text-sm font-medium submit-button-guestbook-messages">
+                                Submit Message
+                            </button>
+                            <button type="button" onclick="showGuestbookForm(false)"
+                                class="flex-1 bg-gray-200 text-gray-700 py-3 rounded-full hover:bg-gray-300 transition-colors uppercase tracking-widest text-xs md:text-sm font-medium">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
-                      <button type="submit" class="w-full bg-wedding-gold text-white py-3 md:py-4 rounded-full hover:bg-yellow-600 transition-colors shadow-md uppercase tracking-widest text-xs md:text-sm font-semibold mt-4">
-                          Confirm Attendance
-                      </button>
-                  </div>
-              </form>
-          </div>
-      </div>
-  </section>
+            <!-- Messages Grid (Shows when form is hidden) -->
+            <div id="guestbook-messages">
+                <div id="guestbook-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 
+                        max-h-[500px] overflow-y-auto scroll-smooth">
+                </div>
+                <div class="text-center mt-8 md:mt-10">
+                    <button
+                        onclick="(function(){ showGuestbookForm(true); setTimeout(()=>{ document.getElementById('guestbook').scrollIntoView({ behavior: 'smooth', block: 'start' }); },50); })()"
+                        class="text-wedding-gold border-b-2 border-wedding-gold pb-1 hover:text-yellow-600 hover:border-yellow-600 transition-colors font-medium text-sm md:text-base">
+                        Write a Wish
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Gift Registry -->
-  <section id="registry" class="py-16 md:py-20 bg-white">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-          <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">Wedding Gift</span>
-          <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text mb-6 md:mb-8">Gift Registry</h2>
-          <p class="text-gray-600 mb-10 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, a monetary contribution towards our future home would be deeply appreciated.</p>
+    <!-- RSVP Section -->
+    <!-- <section id="rsvp" class="py-16 md:py-20 bg-wedding-cream">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="text-center mb-10 md:mb-12">
+                <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">Join Us</span>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text mb-3 md:mb-4">RSVP</h2>
+            </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              <div class="bg-wedding-cream p-6 md:p-8 rounded-2xl shadow-md border border-gray-100">
-                  <div class="text-wedding-gold text-3xl md:text-4xl mb-4"><i class="fas fa-university"></i></div>
-                  <h3 class="font-serif text-lg md:text-xl mb-3 md:mb-4">Bank Transfer</h3>
-                  <p class="text-gray-500 mb-2 text-sm md:text-base">Bank of America</p>
-                  <p class="font-mono text-base md:text-lg text-gray-800 mb-2">1234-5678-9012</p>
-                  <p class="text-gray-500 text-sm md:text-base">Sarah Anderson</p>
-                  <button class="mt-4 text-xs uppercase tracking-widest text-wedding-gold hover:text-yellow-600">Copy Number</button>
-              </div>
+            <div id="rsvp-success" class="bg-white p-8 md:p-10 rounded-2xl shadow-lg text-center mb-8 hidden">
+                <div
+                    class="w-16 h-16 md:w-20 md:h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-green-500">
+                    <i class="fas fa-check text-2xl md:text-3xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl md:text-3xl text-wedding-text mb-3 md:mb-4">Thank You!</h3>
+                <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">Your RSVP has been received. We can't wait to
+                    celebrate with you!</p>
+            </div>
 
-              <div class="bg-wedding-cream p-6 md:p-8 rounded-2xl shadow-md border border-gray-100">
-                  <div class="text-wedding-gold text-3xl md:text-4xl mb-4"><i class="fas fa-envelope-open-text"></i></div>
-                  <h3 class="font-serif text-lg md:text-xl mb-3 md:mb-4">Digital Envelope</h3>
-                  <div class="w-28 h-28 md:w-32 md:h-32 bg-gray-100 mx-auto mb-4 flex items-center justify-center rounded-lg">
-                      <i class="fas fa-qrcode text-3xl md:text-4xl text-gray-400"></i>
-                  </div>
-                  <p class="text-gray-500 text-xs md:text-sm">Scan to send gift via PayPal/Venmo</p>
-              </div>
-          </div>
-      </div>
-  </section>
+            <div id="rsvp-form-wrap" class="bg-white p-6 md:p-8 lg:p-12 rounded-2xl shadow-lg">
+                <form id="rsvp-form" onsubmit="handleRsvpSubmit(event)">
+                    <div class="space-y-5 md:space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input id="rsvp-name" type="text" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base"
+                                placeholder="John Doe">
+                        </div>
 
-  <!-- Footer -->
-  <footer class="bg-wedding-text text-white py-12 md:py-16">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-          <h2 class="font-script text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 text-wedding-gold">Mustahadi Agum &amp; Mempelai Wanita</h2>
-          <p class="uppercase tracking-widest text-xs md:text-sm opacity-70 mb-6 md:mb-8">Thank you for being part of our story</p>
-          <div class="flex justify-center space-x-6 mb-8 md:mb-10">
-              <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fab fa-facebook-f"></i></a>
-          </div>
-          <p class="text-xs text-gray-500">© 2024 Sarah &amp; James Wedding. Designed with Love.</p>
-      </div>
-  </footer>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input id="rsvp-email" type="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-wedding-gold focus:border-wedding-gold outline-none transition-colors text-sm md:text-base"
+                                placeholder="john@example.com">
+                        </div>
 
-  <!-- Floating Music Control -->
-  <div class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40">
-      <button @click="toggleMusic()" class="w-12 h-12 bg-white/90 backdrop-blur shadow-lg rounded-full flex items-center justify-center text-wedding-gold hover:scale-110 transition-transform duration-300 border border-wedding-gold/20">
-          <i class="fas fa-music" :class="musicPlaying ? 'fa-pause' : 'fa-music'"></i>
-      </button>
-  </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-3">Will you be attending?</label>
+                            <div class="space-y-3">
+                                <label
+                                    class="radio-label flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all">
+                                    <input type="radio" name="attendance" value="accept" class="radio-custom mr-3"
+                                        required>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-heart text-wedding-gold mr-3 text-lg"></i>
+                                        <span class="text-gray-700 font-medium text-sm md:text-base">Joyfully
+                                            Accepts</span>
+                                    </div>
+                                </label>
+                                <label
+                                    class="radio-label flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer transition-all">
+                                    <input type="radio" name="attendance" value="decline" class="radio-custom mr-3"
+                                        required>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-heart-broken text-gray-400 mr-3 text-lg"></i>
+                                        <span class="text-gray-700 font-medium text-sm md:text-base">Regretfully
+                                            Declines</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
 
-  <!-- Lightbox Modal -->
-  <div x-show="lightboxOpen" class="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center p-4" style="display: none;" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click="lightboxOpen = false">
-      <button @click="lightboxOpen = false" class="absolute top-4 right-4 md:top-6 md:right-6 text-white/70 hover:text-white text-3xl md:text-4xl focus:outline-none z-10">
-          <i class="fas fa-times"></i>
-      </button>
-      <img :src="currentImage" class="max-h-[90vh] max-w-full rounded shadow-2xl" src="">
-  </div>
+                        <button type="submit"
+                            class="w-full bg-wedding-gold text-white py-3 md:py-4 rounded-full hover:bg-yellow-600 transition-colors shadow-md uppercase tracking-widest text-xs md:text-sm font-semibold mt-4">
+                            Confirm Attendance
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section> -->
 
+    <!-- Gift Registry -->
+    <section id="registry" class="py-16 md:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="text-wedding-gold font-script text-2xl md:text-3xl block mb-2">Wedding Gift</span>
+            <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-wedding-text mb-6 md:mb-8">Gift Registry</h2>
+            <p class="text-gray-600 mb-10 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">Your presence at our wedding
+                is the greatest gift of all. However, if you wish to honor us with a gift, a monetary contribution
+                towards our future home would be deeply appreciated.</p>
 
-</body></html>
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-6 md:gap-8">
+                <div class="bg-wedding-cream p-6 md:p-8 rounded-2xl shadow-md border border-gray-100">
+                    <div class="text-wedding-gold text-3xl md:text-4xl mb-4"><i class="fas fa-university"></i></div>
+                    <h3 class="font-serif text-lg md:text-xl mb-3 md:mb-4">Bank Transfer</h3>
+                    <p class="text-gray-500 mb-2 text-sm md:text-base">Bank Central Asia (BCA)</p>
+                    <p class="font-mono text-base md:text-lg text-gray-800 mb-2 account-number">7750975806</p>
+                    <p class="text-gray-500 text-sm md:text-base">Tree Vagianti</p>
+                    <button class="mt-4 text-xs uppercase tracking-widest text-wedding-gold hover:text-yellow-600"
+                        onclick="copyAccountNumber(this)">Copy Number</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-wedding-text text-white py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="font-script text-4xl md:text-5xl lg:text-6xl mb-4 md:mb-6 text-wedding-gold">Mustahadi Agum &amp;
+                Tree vagianti</h2>
+            <p class="uppercase tracking-widest text-xs md:text-sm opacity-70 mb-6 md:mb-8">Thank you for being part of
+                our story</p>
+            <div class="flex justify-center space-x-6 mb-8 md:mb-10">
+                <!-- <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors"><i class="fab fa-facebook-f"></i></a> -->
+            </div>
+            <p class="text-xs text-gray-500">© 2025</p>
+        </div>
+    </footer>
+
+    <!-- Floating Music Control -->
+    <div class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40">
+        <button id="music-btn" onclick="toggleMusic()"
+            class="w-12 h-12 bg-white/90 backdrop-blur shadow-lg rounded-full flex items-center justify-center text-wedding-gold hover:scale-110 transition-transform duration-300 border border-wedding-gold/20">
+            <i id="music-icon" class="fas fa-music"></i>
+        </button>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center p-4 hidden"
+        onclick="closeLightbox()">
+        <button onclick="closeLightbox(); event.stopPropagation();"
+            class="absolute top-4 right-4 md:top-6 md:right-6 text-white/70 hover:text-white text-3xl md:text-4xl focus:outline-none z-10">
+            <i class="fas fa-times"></i>
+        </button>
+        <img id="lightbox-img" src="" class="max-h-[90vh] max-w-full rounded shadow-2xl" alt="">
+    </div>
+
+    <!-- SCRIPT: All vanilla JS to replace Alpine -->
+</body>
+
+<script type="module">
+    var firstInit = true
+    var bgmStarted = false;
+    const bgm = new Audio("bgm.mp3")
+
+    console.log("AKU BUKAN FRONTEND AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        // state
+        const state = {
+            mobileMenuOpen: false,
+            musicPlaying: false,
+            rsvpSuccess: false,
+            lightboxOpen: false,
+            currentImage: '',
+            showGuestbookForm: false,
+            guestbookMessages: []
+        };
+
+        // document.addEventListener("click", function () {
+        //     state.musicPlaying = true
+        //     bgm.loop = true
+        //     bgm.play()
+        // });
+
+        // Mobile menu
+        window.toggleMobileMenu = function () {
+            state.mobileMenuOpen = !state.mobileMenuOpen;
+            const menu = document.getElementById('mobile-menu');
+            if (state.mobileMenuOpen) menu.classList.remove('hidden'); else menu.classList.add('hidden');
+        }
+
+        // Music
+        window.toggleMusic = function () {
+            state.musicPlaying = !state.musicPlaying;
+            const icon = document.getElementById('music-icon');
+            if (state.musicPlaying) { 
+                icon.classList.remove('fa-music'); icon.classList.add('fa-pause'); 
+                bgm.play();
+            }
+            else { 
+                icon.classList.remove('fa-pause'); icon.classList.add('fa-music'); 
+                bgm.pause();
+            }
+        }
+
+        // Lightbox
+        window.openLightbox = function (src) {
+            state.currentImage = src;
+            state.lightboxOpen = true;
+            const modal = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            modal.classList.remove('hidden');
+        }
+        window.closeLightbox = function () {
+            state.lightboxOpen = false;
+            const modal = document.getElementById('lightbox');
+            modal.classList.add('hidden');
+        }
+
+        // Guestbook render
+        async function renderGuestbookMessages() {
+            const list = document.getElementById('guestbook-list');
+            list.innerHTML = '';
+            if (firstInit) {
+                state.guestbookMessages = (await readData("692ec1e143b1c97be9d28d20")).datas;
+                firstInit = false
+            }
+        
+            state.guestbookMessages.forEach((msg) => {
+                const card = document.createElement('div');
+                card.className = 'bg-wedding-cream p-5 md:p-6 rounded-2xl shadow-sm relative';
+                card.innerHTML = `
+            <div class="absolute -top-3 -left-3 text-wedding-gold opacity-20">
+                <i class="fas fa-quote-left text-4xl md:text-6xl"></i>
+            </div>
+            <p class="text-gray-600 italic mb-4 md:mb-6 relative z-10 text-sm md:text-base">${escapeHtml(msg.message)}</p>
+            <div class="flex items-center">
+                <div class="w-8 h-8 md:w-10 md:h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 mr-3 flex-shrink-0">
+                <i class="fas fa-user text-xs md:text-sm"></i>
+                </div>
+                <div>
+                <h4 class="font-serif font-semibold text-wedding-text text-sm md:text-base">${escapeHtml(msg.name)}</h4>
+                <span class="text-xs text-gray-400">${escapeHtml(new Date(msg.time).toLocaleString('en-us', {
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                }))}</span>
+                </div>
+            </div>
+            `;
+                list.appendChild(card);
+            });
+        }
+
+        // show/hide guestbook form
+        window.showGuestbookForm = function (show) {
+            state.showGuestbookForm = !!show;
+            const form = document.getElementById('guestbook-form');
+            const messages = document.getElementById('guestbook-messages');
+            if (state.showGuestbookForm) { form.classList.remove('hidden'); messages.classList.add('hidden'); }
+            else { form.classList.add('hidden'); messages.classList.remove('hidden'); }
+        }
+
+        // submit guestbook
+        window.submitGuestbookMessage = async function (event) {
+            event.preventDefault();
+            const form = event.target;
+            const fd = new FormData(form);
+            const name = fd.get('guestName');
+            const message = fd.get('guestMessage');
+            if (!name || !message) return;
+            state.guestbookMessages.unshift({ name: name, message: message, time: Date.now() });
+
+            const button = document.querySelector('.submit-button-guestbook-messages');
+            button.textContent = "Submiting...";
+
+            await saveData("692ec1e143b1c97be9d28d20", {
+                "datas": state.guestbookMessages
+            })
+
+            button.textContent = "Submit Message";
+
+            form.reset();
+            showGuestbookForm(false);
+            renderGuestbookMessages();
+        }
+
+        // initial render guestbook
+        renderGuestbookMessages();
+
+        // RSVP handling
+        window.handleRsvpSubmit = function (e) {
+            e.preventDefault();
+            // you can collect values here if needed
+            state.rsvpSuccess = true;
+            document.getElementById('rsvp-success').classList.remove('hidden');
+            document.getElementById('rsvp-form-wrap').classList.add('hidden');
+        }
+
+        // Countdown timer
+        function startCountdown() {
+            const daysEl = document.getElementById('cd-days');
+            const hoursEl = document.getElementById('cd-hours');
+            const minutesEl = document.getElementById('cd-minutes');
+            const secondsEl = document.getElementById('cd-seconds');
+            // update wedding date if needed
+            const weddingDate = new Date('December 21, 2025 17:00:00').getTime();
+            function update() {
+                const now = Date.now();
+                const distance = weddingDate - now;
+                if (distance < 0) { clearInterval(timer); daysEl.textContent = '0'; hoursEl.textContent = '0'; minutesEl.textContent = '0'; secondsEl.textContent = '0'; return; }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                daysEl.textContent = days;
+                hoursEl.textContent = hours.toString().padStart(2, '0');
+                minutesEl.textContent = minutes.toString().padStart(2, '0');
+                secondsEl.textContent = seconds.toString().padStart(2, '0');
+            }
+            update();
+            const timer = setInterval(update, 1000);
+        };
+
+        function loadGallery() {
+            const galleryGrid = document.querySelector('.gallery-grid');
+            const galleryItem = galleryGrid.querySelector('.gallery-item');
+
+            fetch("gallery.json")
+                .then(response => response.json())
+                .then(items => {
+                    items['data'].forEach(item => {
+                        const galleryItemCloned = galleryItem.cloneNode(true);
+                        galleryItemCloned.classList.remove('hidden')
+                        galleryGrid.appendChild(galleryItemCloned);
+
+                        galleryItemCloned.setAttribute('data-src', item['src']);
+                        galleryItemCloned.querySelector('img').setAttribute('src', item['src']);
+                    })
+                })
+        }
+
+        function init() {
+            startCountdown();
+            loadGallery()
+        }
+
+        init()
+
+        // simple HTML escape to avoid injection
+        function escapeHtml(text) {
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+            return String(text).replace(/[&<>"']/g, function (m) { return map[m]; });
+        }
+
+    });
+
+    // Read data (anyone can read)
+    async function readData(binID) {
+        const response = await fetch(`https://api.jsonbin.io/v3/b/${binID}/latest`, {
+            headers: {
+                'X-Master-Key': "$2a$10$AC9hA7JpCV9rp1/y6lGRDOMhahFjt8mit7Kd0ApB1XTLUINQ2AeWW",
+                'X-Access-Key': "$2a$10$SmCIxHIU7wnRxjWK18Xbruzi0e7JewkJzVyLi4WAqwoJqzvSv5bTq"
+            }
+        });
+        return (await response.json()).record;
+    }
+
+    async function saveData(binID, data) {
+        await fetch(`https://api.jsonbin.io/v3/b/${binID}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Master-Key': "$2a$10$AC9hA7JpCV9rp1/y6lGRDOMhahFjt8mit7Kd0ApB1XTLUINQ2AeWW",
+                'X-Access-Key': "$2a$10$SmCIxHIU7wnRxjWK18Xbruzi0e7JewkJzVyLi4WAqwoJqzvSv5bTq"
+            },
+            body: JSON.stringify(data)
+        });
+    }
+    // submit-button-guestbook-messages
+
+    function copyAccountNumber(button) {
+        const accountNumberElement = document.querySelector('.account-number');
+        navigator.clipboard.writeText(accountNumberElement.innerHTML)
+            .then(() => {
+                button.textContent = "Copied!";
+                setTimeout(() => {
+                    button.textContent = "Copy Number";
+                }, 1500);
+            });
+    }
+</script>
+
+</html>
