@@ -88,7 +88,7 @@
         class="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden pt-16 md:pt-20">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80"
+            <img src="https://drive.google.com/thumbnail?id=1_JcG0xdyXEqaLbyGy1UJJbaT7zie-uNT&sz=w2000"
                 alt="Wedding Background" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-white/60 backdrop-blur-[2px]"></div>
         </div>
@@ -116,8 +116,7 @@
 
             <p
                 class="text-sm md:text-base lg:text-lg tracking-widest uppercase mb-8 md:mb-10 text-gray-800 font-semibold px-4">
-                are you and 1 hotel <br>Jl. Bojong Koneng Atas Jl. Pager Sari, Cibeunying, Kec. Cimenyan, Kabupaten
-                Bandung, Jawa Barat 40191</p>
+                are you and 1 hotel</p>
 
             <a href="#story"
                 class="group relative inline-block px-6 md:px-8 py-3 md:py-4 bg-transparent overflow-hidden rounded-full border-2 border-gray-800 hover:border-wedding-gold transition-colors duration-300">
@@ -273,7 +272,7 @@
                         <i class="fas fa-church text-xl md:text-2xl"></i>
                     </div>
                     <h3 class="font-serif text-xl md:text-2xl mb-2">The Ceremony</h3>
-                    <p class="text-wedding-gold font-medium mb-3 md:mb-4 text-sm md:text-base">16:00 - 17:00</p>
+                    <p class="text-wedding-gold font-medium mb-3 md:mb-4 text-sm md:text-base">17:00 - 21:00</p>
                     <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">are you and 1 hotel<br>
                         Jl. Bojong Koneng Atas Jl. Pager Sari, Cibeunying, Kec. Cimenyan, Kabupaten Bandung, Jawa Barat
                         40191</p>
@@ -293,7 +292,7 @@
                         <i class="fas fa-glass-cheers text-xl md:text-2xl"></i>
                     </div>
                     <h3 class="font-serif text-xl md:text-2xl mb-2">The Reception</h3>
-                    <p class="text-wedding-gold font-medium mb-3 md:mb-4 text-sm md:text-base">17:00 - 21:00</p>
+                    <p class="text-wedding-gold font-medium mb-3 md:mb-4 text-sm md:text-base">16:00 - 17:00</p>
                     <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">are you and 1 hotel<br>
                         Jl. Bojong Koneng Atas Jl. Pager Sari, Cibeunying, Kec. Cimenyan, Kabupaten Bandung, Jawa Barat
                         40191</p>
@@ -523,6 +522,8 @@
     var bgmStarted = false;
     const bgm = new Audio("bgm.mp3")
 
+    let audioStarted = false;
+
     console.log("AKU BUKAN FRONTEND AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     
     document.addEventListener('DOMContentLoaded', function () {
@@ -536,6 +537,22 @@
             showGuestbookForm: false,
             guestbookMessages: []
         };
+
+        // Listen for ANY user interaction
+        document.addEventListener('click', startAudio, { once: true });
+        document.addEventListener('keydown', startAudio, { once: true });
+        document.addEventListener('touchend', startAudio, { once: true });
+
+        function startAudio() {
+            if (!audioStarted) {
+                audioStarted = true;
+                bgm.play();
+
+                const icon = document.getElementById('music-icon');
+                icon.classList.remove('fa-music'); 
+                icon.classList.add('fa-pause'); 
+            }
+        }
 
         // document.addEventListener("click", function () {
         //     state.musicPlaying = true
@@ -700,6 +717,7 @@
 
                         galleryItemCloned.setAttribute('data-src', item['src']);
                         galleryItemCloned.querySelector('img').setAttribute('src', item['src']);
+                        galleryItemCloned.setAttribute('onclick', "openLightbox('" + item['src'] + "')");
                     })
                 })
         }
