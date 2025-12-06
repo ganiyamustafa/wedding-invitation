@@ -661,7 +661,9 @@
 
         scrollBox.addEventListener('wheel', function (e) {
             const atTop = scrollBox.scrollTop === 0;
-            const atBottom = scrollBox.scrollHeight - scrollBox.scrollTop === scrollBox.clientHeight;
+            const atBottom = Math.abs(
+                galleryScroll.scrollHeight - galleryScroll.scrollTop - galleryScroll.clientHeight
+            ) < 2;
 
             // If user scrolls up at top → allow page scroll
             if (atTop && e.deltaY < 0) {
