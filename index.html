@@ -35,13 +35,6 @@
     </script>
 </head>
 
-<style>
-    #gallery .overflow-y-auto {
-        overscroll-behavior: contain;
-        -webkit-overflow-scrolling: touch;
-    }
-</style>
-
 <body class="bg-wedding-cream text-wedding-text font-sans antialiased overflow-x-hidden"
     style="height: auto; min-height: 100%;">
 
@@ -664,24 +657,24 @@
             });
         }
 
-        // const scrollBox = document.querySelector('#gallery .overflow-y-auto');
+        const scrollBox = document.querySelector('#gallery .overflow-y-auto');
 
-        // scrollBox.addEventListener('wheel', function (e) {
-        //     const atTop = scrollBox.scrollTop === 0;
-        //     const atBottom = scrollBox.scrollHeight - scrollBox.scrollTop === scrollBox.clientHeight;
+        scrollBox.addEventListener('wheel', function (e) {
+            const atTop = scrollBox.scrollTop === 0;
+            const atBottom = scrollBox.scrollHeight - scrollBox.scrollTop === scrollBox.clientHeight;
 
-        //     // If user scrolls up at top → allow page scroll
-        //     if (atTop && e.deltaY < 0) {
-        //         e.preventDefault();
-        //         window.scrollBy(0, e.deltaY);
-        //     }
+            // If user scrolls up at top → allow page scroll
+            if (atTop && e.deltaY < 0) {
+                e.preventDefault();
+                window.scrollBy(0, e.deltaY);
+            }
 
-        //     // If user scrolls down at bottom → allow page scroll
-        //     else if (atBottom && e.deltaY > 0) {
-        //         e.preventDefault();
-        //         window.scrollBy(0, e.deltaY);
-        //     }
-        // });
+            // If user scrolls down at bottom → allow page scroll
+            else if (atBottom && e.deltaY > 0) {
+                e.preventDefault();
+                window.scrollBy(0, e.deltaY);
+            }
+        });
 
         // show/hide guestbook form
         window.showGuestbookForm = function (show) {
