@@ -35,6 +35,20 @@
     </script>
 </head>
 
+<style>
+    #galleryScroll {
+        max-height: 1200px;
+        overflow-y: auto;
+        /* Remove or don't add overscroll-behavior */
+    }
+    
+    @media (min-width: 768px) {
+        #galleryScroll {
+            max-height: 800px;
+        }
+    }
+</style>
+
 <body class="bg-wedding-cream text-wedding-text font-sans antialiased overflow-x-hidden"
     style="height: auto; min-height: 100%;">
 
@@ -316,7 +330,7 @@
             </div>
     
             <!-- Scrollable container -->
-            <div class="max-h-[1200px] overflow-y-auto pr-2">
+            <div id="galleryScroll" class="max-h-[1200px] overflow-y-auto pr-2">
     
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 gallery-grid">
                     <!-- Image 1 -->
@@ -657,26 +671,26 @@
             });
         }
 
-        const scrollBox = document.querySelector('#gallery .overflow-y-auto');
+        // const scrollBox = document.querySelector('#gallery .overflow-y-auto');
 
-        scrollBox.addEventListener('wheel', function (e) {
-            const atTop = scrollBox.scrollTop === 0;
-            const atBottom = Math.abs(
-                galleryScroll.scrollHeight - galleryScroll.scrollTop - galleryScroll.clientHeight
-            ) < 2;
+        // scrollBox.addEventListener('wheel', function (e) {
+        //     const atTop = scrollBox.scrollTop === 0;
+        //     const atBottom = Math.abs(
+        //         galleryScroll.scrollHeight - galleryScroll.scrollTop - galleryScroll.clientHeight
+        //     ) < 2;
 
-            // If user scrolls up at top → allow page scroll
-            if (atTop && e.deltaY < 0) {
-                e.preventDefault();
-                window.scrollBy(0, e.deltaY);
-            }
+        //     // If user scrolls up at top → allow page scroll
+        //     if (atTop && e.deltaY < 0) {
+        //         e.preventDefault();
+        //         window.scrollBy(0, e.deltaY);
+        //     }
 
-            // If user scrolls down at bottom → allow page scroll
-            else if (atBottom && e.deltaY > 0) {
-                e.preventDefault();
-                window.scrollBy(0, e.deltaY);
-            }
-        });
+        //     // If user scrolls down at bottom → allow page scroll
+        //     else if (atBottom && e.deltaY > 0) {
+        //         e.preventDefault();
+        //         window.scrollBy(0, e.deltaY);
+        //     }
+        // });
 
         // show/hide guestbook form
         window.showGuestbookForm = function (show) {
